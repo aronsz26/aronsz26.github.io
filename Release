@@ -1,0 +1,24 @@
+Origin: aronsz26
+Label: aronsz26
+Suite: stable
+Version: 1.0
+Codename: ios
+Architectures: iphoneos-arm64
+Components: main
+Description: Tweaks by aronsz26
+Date: Mon, 28 Sep 2026 20:03:18 UTC
+MD5Sum:
+ 84aaf98034175a2689d8839ea31a8340 974 Packages
+ 89ad317618ffe082e6f40b1b18738736 576 Packages.gz
+ b904d149c7381a3dd5ce24d23420de99 662 Packages.bz2
+ f5e154fd095a7ae0d0e0fdba9f8834fe 656 Packages.xz
+SHA1:
+ 29d02922415f943e25c60966be8a9876712682ac 974 Packages
+ 86b57b48c38626e8ac1e2a71fef36fa64b1b0d5e 576 Packages.gz
+ 40b5aa12da1f96d2ddc191b94786240b7a372386 662 Packages.bz2
+ 6513a2026908dbffadce8aa6884cd97d9d2faef0 656 Packages.xz
+SHA256:
+ 68456811b8065be22eec4b6c34b1cf8e028dc3ac233f83f84081cd382c3e0ead 974 Packages
+ db351b0338ca4c6f06116a7b7e01f2c4f247669ebf30b045efcba6562e58997c 576 Packages.gz
+ 0c235b7ef07f5b103d68e7ab842dd081b48c65747be2508c92cc9743fa0e24e9 662 Packages.bz2
+ 4e9990556a97d0d9ce1c7b0194d09cd218125dc1b6ee94e386ef9f971405e05e 656 Packages.xz
