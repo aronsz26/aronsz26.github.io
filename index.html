@@ -25,6 +25,9 @@
   .tweak img { width: 56px; height: 56px; border-radius: 13px; flex: none; }
   .tweak strong { display: block; }
   .tweak span { color: var(--muted); font-size: 15px; }
+  .shots { display: flex; gap: 12px; overflow-x: auto; padding: 14px 2px 6px; scroll-snap-type: x mandatory; }
+  .shots img { width: 150px; flex: none; border-radius: 18px; scroll-snap-align: start;
+               box-shadow: 0 8px 22px rgba(0,0,0,0.35); }
   footer { margin-top: 36px; text-align: center; color: var(--muted); font-size: 14px; }
   footer a { color: var(--text); }
 </style>
@@ -44,12 +47,18 @@
 
   <h2>Tweaks</h2>
   <a class="tweak" href="https://github.com/aronsz26/LockScreenRestore">
-    <img src="https://raw.githubusercontent.com/aronsz26/LockScreenRestore/main/depiction/icon.png" alt="">
+    <img src="depictions/lockscreenrestore/depiction/icon.png" alt="">
     <div>
       <strong>LockScreenRestore</strong>
       <span>The iOS 15 lock screen, back on iOS 16. Rootless.</span>
     </div>
   </a>
+  <div class="shots">
+    <img src="depictions/lockscreenrestore/screenshots/lockscreen.jpg" alt="Lock screen">
+    <img src="depictions/lockscreenrestore/screenshots/notifications.jpg" alt="Notifications">
+    <img src="depictions/lockscreenrestore/screenshots/music.jpg" alt="Music player">
+    <img src="depictions/lockscreenrestore/screenshots/settings.jpg" alt="Settings">
+  </div>
 
   <footer>
     Problems or ideas? <a href="https://github.com/aronsz26/LockScreenRestore/issues">Open an issue on GitHub</a>
