@@ -11,18 +11,18 @@
         {
           "class": "DepictionScreenshotsView",
           "itemCornerRadius": 14,
-          "itemSize": "{160, 346}",
+          "itemSize": "{160, 324}",
           "screenshots": [
             {
-              "url": "https://aronsz26.github.io/depictions/lockscreenrestore/screenshots/lockscreen.jpg",
+              "url": "https://aronsz26.github.io/depictions/lockscreenrestore/screenshots/lockscreen.png",
               "accessibilityText": "Lock screen"
             },
             {
-              "url": "https://aronsz26.github.io/depictions/lockscreenrestore/screenshots/notifications.jpg",
+              "url": "https://aronsz26.github.io/depictions/lockscreenrestore/screenshots/notifications.png",
               "accessibilityText": "Notifications"
             },
             {
-              "url": "https://aronsz26.github.io/depictions/lockscreenrestore/screenshots/music.jpg",
+              "url": "https://aronsz26.github.io/depictions/lockscreenrestore/screenshots/music.png",
               "accessibilityText": "Music player"
             },
             {
