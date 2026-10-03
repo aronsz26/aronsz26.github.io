@@ -1,7 +1,6 @@
 {
   "minVersion": "0.1",
   "class": "DepictionTabView",
-  "headerImage": "https://aronsz26.github.io/depictions/notifications14/depiction/banner.jpg",
   "tintColor": "#FF3B30",
   "tabs": [
     {
@@ -35,7 +34,7 @@
         {
           "class": "DepictionMarkdownView",
           "useSpacing": true,
-          "markdown": "🔔 **Notifications** – iOS 14's look on the lock screen, in Notification Center and as banners\n\n🌙 **Do Not Disturb** – iOS 14's card instead of the Focus pill\n\n⚙️ **Settings** – turn it on or off in Settings → Notifications14"
+          "markdown": "**Notifications** – iOS 14's look on the lock screen, in Notification Center and as banners\n\n**Do Not Disturb** – iOS 14's card instead of the Focus pill\n\n**Settings** – turn it on or off in Settings → Notifications14"
         },
         {
           "class": "DepictionSeparatorView"
