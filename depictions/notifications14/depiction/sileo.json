@@ -1,0 +1,79 @@
+{
+  "minVersion": "0.1",
+  "class": "DepictionTabView",
+  "headerImage": "https://aronsz26.github.io/depictions/notifications14/depiction/banner.jpg",
+  "tintColor": "#FF3B30",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 14,
+          "itemSize": "{160, 284}",
+          "screenshots": [
+            {
+              "url": "https://aronsz26.github.io/depictions/notifications14/screenshots/ios14.jpg",
+              "accessibilityText": "With Notifications14: iOS 14 notifications"
+            },
+            {
+              "url": "https://aronsz26.github.io/depictions/notifications14/screenshots/ios15.jpg",
+              "accessibilityText": "Without: iOS 15 notifications"
+            }
+          ]
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "useSpacing": true,
+          "markdown": "**iOS 14's notifications, back on iOS 15.** iOS 15 still has the old notification design; Notifications14 switches it back on. No system files are changed."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "What it changes"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "useSpacing": true,
+          "markdown": "🔔 **Notifications** – iOS 14's look on the lock screen, in Notification Center and as banners\n\n🌙 **Do Not Disturb** – iOS 14's card instead of the Focus pill\n\n⚙️ **Settings** – turn it on or off in Settings → Notifications14"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Compatibility",
+          "text": "iOS 15 · rootless & rootful"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "aronsz26"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Source code & issues",
+          "action": "https://github.com/aronsz26/Notifications14",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Report a problem",
+          "action": "https://github.com/aronsz26/Notifications14/issues",
+          "openExternal": true
+        }
+      ]
+    },
+    {
+      "tabname": "Changelog",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "useSpacing": true,
+          "markdown": "**1.0**\n- First release: iOS 14's notifications on iOS 15, with an on/off switch in Settings"
+        }
+      ]
+    }
+  ]
+}

@@ -3,22 +3,22 @@ Label: aronsz26
 Suite: stable
 Version: 1.0
 Codename: ios
-Architectures: iphoneos-arm64
+Architectures: iphoneos-arm64 iphoneos-arm
 Components: main
 Description: Tweaks by aronsz26
-Date: Mon, 28 Sep 2026 21:42:36 UTC
+Date: Sat, 03 Oct 2026 08:59:46 UTC
 MD5Sum:
- 6575057d540125ba2f35dec319148913 1949 Packages
- 32d1b067ec6af3bd36160bedaaf767b1 699 Packages.gz
- 0dff4584e9351d20d02cccb3692ceacf 878 Packages.bz2
- b4423c4b56baba9300ae4e98daeda675 760 Packages.xz
+ fe0d7883e9f170cea05fb8a8a41aacf4 3411 Packages
+ 72e0510d875ed3972614f77debd7faa3 982 Packages.gz
+ 6d6cfdad0f7fde2bf420132a63043739 1170 Packages.bz2
+ 726ac962de9abcc0135fbdc88c6732c5 1016 Packages.xz
 SHA1:
- 733aab2ec8957223204304230ac7b0c173419bed 1949 Packages
- c909b5b4cac1ee77000c60efc591d6a95046b0d2 699 Packages.gz
- dff4d21d44751bb64268d04c5e61a5a6e2026ddc 878 Packages.bz2
- 22a6c463135d25c00106a02e0249211eafcbed89 760 Packages.xz
+ 253da61b9f76cf08fcc74f0e459dd2bc957071d6 3411 Packages
+ e970b47198755046ddb2355fd73787a0256f5062 982 Packages.gz
+ 1adaa28111fbbb15edb5533fc5fd8556af4b9876 1170 Packages.bz2
+ 25563cdbba5c67b82e47495ed4fec3ebc7a522c7 1016 Packages.xz
 SHA256:
- f10f2ca6724f7091f70db4cfc11979da1cdc27b1e7ca8c96fe83212d0f82d395 1949 Packages
- 028666c392aebc8d47e460854c92de24fd7e468bff986f207fe6cd6c4f1b0310 699 Packages.gz
- 9e918227dbd9e43a116cf77c40afb17173a6dd7c5350b947a9ee75b8f456a133 878 Packages.bz2
- 90803119a4fc836b71f2bb76ef00fcbb21689f1da15cd336ed999c3d6fa04c8c 760 Packages.xz
+ 8ea1aaad1a0f71a17f9945529c672ac57f2e9b9de8e2a3fb955fc8981044b482 3411 Packages
+ f2663c339aa004a6ebb8cb0f062cf3afcb64840853e4f94e832e2a8bd91599a9 982 Packages.gz
+ 579122412f3d811d544aa051f9cfa919407ca809b2cd8514d3f5846633307273 1170 Packages.bz2
+ 5f17583716d0be1d1a3842888088285ad8b90adbbde47e6bd6b1f5605ade2a14 1016 Packages.xz

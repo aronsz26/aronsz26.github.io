@@ -33,3 +33,39 @@ Size: 108992
 MD5sum: c516f2cad89a258d0ffe47ded0ee2bf2
 SHA1: 6c109959355af8111c7961e8789fc0408b46aac5
 SHA256: 0f0f9c20bdebe92eaab0fb450fb7cae780872f591b3479cc79c022fd9bf46778
+
+Package: com.aronsz26.notifications14
+Name: Notifications14
+Description: Brings back the iOS 14 notification design on iOS 15.
+Maintainer: aronsz26
+Author: aronsz26
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 15.0)
+SileoDepiction: https://aronsz26.github.io/depictions/notifications14/depiction/sileo.json
+Icon: https://aronsz26.github.io/depictions/notifications14/depiction/icon.png
+Architecture: iphoneos-arm
+Version: 1.0
+Installed-Size: 356
+Filename: ./debs/com.aronsz26.notifications14_1.0_iphoneos-arm.deb
+Size: 10906
+MD5sum: 32cc30121bad46b2a1897402f29d4c25
+SHA1: 6cf3e87152e46465e937c2f5bd05ea2ab2c8df12
+SHA256: c75a163827016ce187986c777e1aa362bae6fe8dab3a6a4f47dee8c9a566ce83
+
+Package: com.aronsz26.notifications14
+Name: Notifications14
+Description: Brings back the iOS 14 notification design on iOS 15.
+Maintainer: aronsz26
+Author: aronsz26
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 15.0)
+SileoDepiction: https://aronsz26.github.io/depictions/notifications14/depiction/sileo.json
+Icon: https://aronsz26.github.io/depictions/notifications14/depiction/icon.png
+Architecture: iphoneos-arm64
+Version: 1.0
+Installed-Size: 356
+Filename: ./debs/com.aronsz26.notifications14_1.0_iphoneos-arm64.deb
+Size: 10988
+MD5sum: 3c5ce8e9ade9c9c40a1dc3a4c532db20
+SHA1: eae6887e8084d18f92b2c79cd624cfec011295d6
+SHA256: 16a487d5e6fe7d05c7608bb9e1883f6f0405a3f688cc0064cfbdaa0b81021cd7

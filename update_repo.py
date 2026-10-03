@@ -39,7 +39,7 @@ for name, data in files.items():
 
 release = [
     'Origin: aronsz26', 'Label: aronsz26', 'Suite: stable', 'Version: 1.0', 'Codename: ios',
-    'Architectures: iphoneos-arm64', 'Components: main', 'Description: Tweaks by aronsz26',
+    'Architectures: iphoneos-arm64 iphoneos-arm', 'Components: main', 'Description: Tweaks by aronsz26',
     'Date: ' + time.strftime('%a, %d %b %Y %H:%M:%S UTC', time.gmtime()),
 ]
 for label, algo in [('MD5Sum', hashlib.md5), ('SHA1', hashlib.sha1), ('SHA256', hashlib.sha256)]:
