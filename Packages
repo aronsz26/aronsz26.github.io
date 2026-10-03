@@ -34,6 +34,24 @@ MD5sum: c516f2cad89a258d0ffe47ded0ee2bf2
 SHA1: 6c109959355af8111c7961e8789fc0408b46aac5
 SHA256: 0f0f9c20bdebe92eaab0fb450fb7cae780872f591b3479cc79c022fd9bf46778
 
+Package: com.aronsz26.lockscreenrestore
+Name: LockScreenRestore
+Description: iOS 15 style lock screen on iOS 16: clock, date, padlock, Focus pill, notifications from the top, iOS 15 music player, unlock animation, live and dynamic wallpapers and the iOS 15 Settings > Wallpaper page with wallpaper downloads. Each part can be switched off in Settings. Beta.
+Maintainer: aronsz26
+Author: aronsz26
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 16.0), preferenceloader
+SileoDepiction: https://aronsz26.github.io/depictions/lockscreenrestore/depiction/sileo.json
+Icon: https://aronsz26.github.io/depictions/lockscreenrestore/depiction/icon.png
+Architecture: iphoneos-arm64
+Version: 1.9.4
+Installed-Size: 700
+Filename: ./debs/com.aronsz26.lockscreenrestore_1.9.4_iphoneos-arm64.deb
+Size: 112144
+MD5sum: 912cc1994d600a34cbab4e8f38ff0f48
+SHA1: 03e662e6536cc14281955e0f11765c527f0050aa
+SHA256: 471ad35111ded2966153270389589514af98e3931ba50ae8e60fc06d1a7a739b
+
 Package: com.aronsz26.notifications14
 Name: Notifications14
 Description: Brings back the iOS 14 notification design on iOS 15.
