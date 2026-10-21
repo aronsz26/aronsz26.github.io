@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WA Classic Setup</title>
+<meta name="description" content="Set up the WA Classic bridge on a Mac, a Windows PC or a Raspberry Pi and install the app with Cydia.">
+<link rel="icon" href="img/icon-114.png">
+<link rel="apple-touch-icon" href="img/icon-114.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+
+  <nav class="globalnav">
+    <a href="./"><img src="img/icon-114.png" alt=""></a>
+    <a href="./">Overview</a>
+    <a href="./#features">Features</a>
+    <a href="./#devices">Devices</a>
+    <a href="setup.html" class="active">Setup</a>
+    <a href="#help">Help</a>
+  </nav>
+
+  <header class="productheader">
+    <a class="name" href="./">WA Classic</a>
+    <nav>
+      <a href="./#features">Features</a>
+      <a href="./#bridge">How it works</a>
+      <a href="./#devices">Devices</a>
+      <a href="setup.html" class="active">Setup</a>
+      <a class="pill" href="#start">Get Started</a>
+    </nav>
+  </header>
+
+  <section class="hero" style="padding-bottom:10px">
+    <div class="text" style="text-align:left">
+      <h1 class="thin" style="font-size:48px">Set up WA Classic.</h1>
+      <p class="lede">A few minutes on your computer, a few taps on your iPhone.</p>
+      <p class="copy">WA Classic needs a small program, the <b>bridge</b>, on a computer in your home. It is linked to your
+      WhatsApp account like WhatsApp Web, and your old iPhone talks to it.</p>
+    </div>
+  </section>
+
+  <div class="boxes" style="margin-bottom:6px">
+    <div><div class="sym">&#9711;</div><h3>An old iPhone.</h3><p>Jailbroken, with iOS 4.3, 5 or 6.</p></div>
+    <div><div class="sym">&#9742;</div><h3>Your phone.</h3><p>With WhatsApp. It stays the main device.</p></div>
+    <div><div class="sym">&#9635;</div><h3>A computer.</h3><p>Mac, Windows PC, Raspberry Pi or NAS that stays on.</p></div>
+    <div><div class="sym">&#8776;</div><h3>Wi-Fi.</h3><p>The iPhone and the computer in the same network for setup.</p></div>
+  </div>
+
+  <div id="start" class="segmented" role="tablist">
+    <button role="tab" data-os="mac" aria-selected="true">Mac</button>
+    <button role="tab" data-os="win" aria-selected="false">Windows</button>
+    <button role="tab" data-os="linux" aria-selected="false">Raspberry Pi / Linux</button>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="num">1</div>
+      <div>
+        <h3>Install Docker.</h3>
+        <div data-for="mac">
+          <p>Docker runs the bridge in its own box, so nothing else on your Mac changes. It needs macOS 12 or newer.</p>
+          <a class="pill btn" href="https://www.docker.com/products/docker-desktop/" target="_blank" rel="noopener">Download Docker Desktop for Mac</a>
+          <ol>
+            <li>Pick <b>Apple Silicon</b> (M1 and newer) or <b>Intel</b>. Not sure? Apple menu &rsaquo; About This Mac.</li>
+            <li>Open the downloaded file and drag Docker into Applications.</li>
+            <li>Start Docker from Applications and accept the terms. You can skip signing in.</li>
+            <li>Wait until the whale icon in the menu bar stops moving.</li>
+          </ol>
+        </div>
+        <div data-for="win" class="hidden">
+          <p>Docker runs the bridge in its own box, so nothing else on your PC changes. Windows 10 or 11 (64-bit) is needed.</p>
+          <a class="pill btn" href="https://www.docker.com/products/docker-desktop/" target="_blank" rel="noopener">Download Docker Desktop for Windows</a>
+          <ol>
+            <li>Run the installer and keep <b>Use WSL 2</b> switched on.</li>
+            <li>Restart the PC when the installer asks for it.</li>
+            <li>Start Docker Desktop and accept the terms. You can skip signing in.</li>
+            <li>If Docker asks to install or update WSL, allow it and start Docker again.</li>
+          </ol>
+        </div>
+        <div data-for="linux" class="hidden">
+          <p>Open a terminal on the Raspberry Pi (64-bit Raspberry Pi OS) or Linux computer and run:</p>
+          <div class="cmd"><span>curl -fsSL https://get.docker.com | sudo sh</span><button>Copy</button></div>
+          <p>This is Docker's official install script. On a NAS (Synology, QNAP, Unraid) install the Docker or Container
+          app from its package center instead.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">2</div>
+      <div>
+        <h3>Start the bridge.</h3>
+        <p data-for="mac">Open <b>Terminal</b> (Applications &rsaquo; Utilities), paste this line and press Return:</p>
+        <p data-for="win" class="hidden">Open <b>PowerShell</b> (Start menu, type "PowerShell"), paste this line and press Enter:</p>
+        <p data-for="linux" class="hidden">Run this in the terminal:</p>
+        <div class="cmd"><span id="run"></span><button>Copy</button></div>
+        <p>It downloads the bridge (a few hundred MB), starts it and starts it again after every reboot. Your chats and the
+        link to WhatsApp are kept in the Docker volume <code>wa-classic-data</code>.</p>
+        <div data-for="win" class="hidden note">Windows asks whether Docker may use the network: allow it for <b>private
+        networks</b>, otherwise the iPhone can't reach the bridge.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">3</div>
+      <div>
+        <h3>Open the setup page.</h3>
+        <p><a class="pill btn" href="http://localhost:8097/" target="_blank" rel="noopener">Open localhost:8097</a></p>
+        <p>Choose a password for the page. It shows everything you need for the next steps: the Cydia source, the address
+        of the bridge and a setup code.</p>
+        <p>The iPhone needs the address of this computer in your home network (like <code>192.168.1.20:8097</code>), not
+        "localhost". Open the setup page once with that address and it shows it to you.</p>
+      </div>
+    </div>
+
+    <div class="step" id="iphone">
+      <div class="num">4</div>
+      <div>
+        <h3>Install WA Classic on the iPhone.</h3>
+        <ol>
+          <li>Open <b>Cydia</b> and tap <b>Sources</b> &rsaquo; <b>Edit</b> &rsaquo; <b>Add</b>.</li>
+          <li>Enter the source from the setup page, like <code>http://192.168.1.20:8097/repo/</code>.</li>
+          <li>Open the new source, tap <b>WA Classic</b> and install it. Cydia offers the right build for your iOS.</li>
+        </ol>
+        <p>Your bridge is the Cydia source, so updating the bridge brings app updates too. Cydia on iOS 4 to 6 can't load
+        most repos on the internet anymore, but it can load your bridge in your own Wi-Fi.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">5</div>
+      <div>
+        <h3>Connect and link.</h3>
+        <ol>
+          <li>Open WA Classic and tap <b>Continue</b>.</li>
+          <li>On <b>Your Bridge</b>, enter the address and the code from the setup page and tap <b>Next</b>.</li>
+          <li>The iPhone shows a QR code. On your phone open WhatsApp, tap <b>Settings</b> &rsaquo; <b>Linked Devices</b>
+            &rsaquo; <b>Link a Device</b> and scan it.</li>
+        </ol>
+        <p>Your chats arrive a moment later. That's it.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">6</div>
+      <div>
+        <h3>Keep it running.</h3>
+        <ul data-for="mac">
+          <li>Docker Desktop &rsaquo; Settings &rsaquo; General: turn on <b>Start Docker Desktop when you sign in</b>.</li>
+          <li>System Settings &rsaquo; Energy (or Battery &rsaquo; Options): turn on <b>Prevent automatic sleeping when the
+            display is off</b>. A MacBook has to stay plugged in and open, or use an external display.</li>
+        </ul>
+        <ul data-for="win" class="hidden">
+          <li>Docker Desktop &rsaquo; Settings &rsaquo; General: turn on <b>Start Docker Desktop when you sign in</b>.</li>
+          <li>Settings &rsaquo; System &rsaquo; Power: set <b>Sleep</b> to <b>Never</b> when plugged in.</li>
+        </ul>
+        <ul data-for="linux" class="hidden">
+          <li>Nothing to do: the bridge starts with the computer.</li>
+        </ul>
+        <p>While the computer sleeps, no messages reach the iPhone. They arrive as soon as it wakes up.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="inner" style="margin-top:10px">
+    <details id="away">
+      <summary>Use WA Classic away from home</summary>
+      <ol>
+        <li>In your router, forward <b>TCP port 25567</b> to the computer with the bridge. Never forward port 8097.</li>
+        <li>On the setup page, enter the address your home has on the internet: a DynDNS name (from your router or a free
+          DynDNS service) or a fixed IP.</li>
+        <li>The iPhone picks up the new address the next time it is at home.</li>
+      </ol>
+      <p>Away from home the connection is encrypted, and the iPhone only accepts your own bridge's certificate.
+      Internet connections without a public IP (carrier-grade NAT) can only use WA Classic at home.</p>
+    </details>
+    <details id="update">
+      <summary>Update the bridge</summary>
+      <p>Run these lines one after another. Your chats and the link to WhatsApp stay.</p>
+      <div class="cmd"><span>docker pull ghcr.io/aronsz26/wa-classic-bridge:latest</span><button>Copy</button></div>
+      <div class="cmd"><span>docker rm -f wa-classic</span><button>Copy</button></div>
+      <p>Then run the line from step 2 again. Afterwards Cydia offers the new app version as an update.</p>
+    </details>
+    <details>
+      <summary>Remove everything</summary>
+      <p>First unlink WhatsApp on the setup page (Manage &rsaquo; Unlink WhatsApp), then:</p>
+      <div class="cmd"><span>docker rm -f wa-classic</span><button>Copy</button></div>
+      <div class="cmd"><span>docker volume rm wa-classic-data</span><button>Copy</button></div>
+    </details>
+    <details id="help">
+      <summary>Something doesn't work</summary>
+      <ul>
+        <li><b>The setup page doesn't open:</b> is Docker running? <code>docker ps</code> should list <code>wa-classic</code>.
+          The log shows what happened: <code>docker logs wa-classic</code></li>
+        <li><b>The iPhone can't reach the bridge:</b> it has to be in the same Wi-Fi, and the address must be this computer's
+          address in your home network. On Windows, check that Docker may use private networks in the firewall.</li>
+        <li><b>Cydia can't load the source:</b> check the address and that it ends with <code>/repo/</code>.</li>
+        <li><b>The code is wrong or expired:</b> press <b>New code</b> on the setup page.</li>
+        <li><b>Forgot the setup page password:</b> <code>docker exec wa-classic rm /data/admin.json</code>, then reload the page.</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="smallprint">
+    <p>WA Classic is an unofficial client and not affiliated with, endorsed by or connected to WhatsApp or Meta. Using it may break WhatsApp's terms of service; your account could be banned. Messages are stored unencrypted on the computer that runs the bridge.</p>
+    <p>Docker and Docker Desktop are trademarks of Docker, Inc. WhatsApp is a trademark of WhatsApp LLC.</p>
+  </div>
+
+  <div class="footer">
+    <div class="crumbs"><img src="img/icon-114.png" alt=""><span><a href="./">WA Classic</a></span><span>Setup</span></div>
+    <div class="cols">
+      <div><h4>About WA Classic</h4><ul><li><a href="./#features">Features</a></li><li><a href="./#bridge">How it works</a></li><li><a href="./#devices">Devices</a></li></ul></div>
+      <div><h4>Setup</h4><ul><li><a href="?os=mac">On a Mac</a></li><li><a href="?os=win">On Windows</a></li><li><a href="?os=linux">On a Raspberry Pi</a></li></ul></div>
+      <div><h4>Help</h4><ul><li><a href="#away">Away from home</a></li><li><a href="#update">Updates</a></li><li><a href="#help">Troubleshooting</a></li></ul></div>
+      <div><h4>Project</h4><ul><li>Source code: with the release</li><li>License: GPL-3.0</li><li>Developer: aronsz26</li></ul></div>
+    </div>
+  </div>
+  <div class="legal"><span>Copyright &copy; 2026 aronsz26.</span><span>Not affiliated with WhatsApp or Meta.</span></div>
+
+</div>
+<script>
+const RUN = 'docker run -d --name wa-classic --restart unless-stopped -p 8097:8097 -p 25567:25567 -v wa-classic-data:/data ghcr.io/aronsz26/wa-classic-bridge:latest';
+function pick(os) {
+  document.querySelectorAll('.segmented button').forEach(b => b.setAttribute('aria-selected', b.dataset.os === os));
+  document.querySelectorAll('[data-for]').forEach(e => e.classList.toggle('hidden', e.dataset.for !== os));
+  document.getElementById('run').textContent = (os === 'linux' ? 'sudo ' : '') + RUN;
+  try { localStorage.setItem('wa-classic-os', os); } catch (e) {}
+}
+document.querySelectorAll('.segmented button').forEach(b => b.onclick = () => pick(b.dataset.os));
+document.querySelectorAll('.cmd button').forEach(b => b.onclick = async () => {
+  try { await navigator.clipboard.writeText(b.previousElementSibling.textContent); b.textContent = 'Copied'; }
+  catch (e) { b.textContent = 'Select it'; }
+  setTimeout(() => b.textContent = 'Copy', 1500);
+});
+// details opened by a link to them (#away, #update, #help)
+function openHash() { const d = document.getElementById(location.hash.slice(1)); if (d && d.tagName === 'DETAILS') d.open = true; }
+window.addEventListener('hashchange', openHash);
+openHash();
+let os = /Win/.test(navigator.platform) ? 'win' : /Linux|arm/i.test(navigator.platform) ? 'linux' : 'mac';
+try { os = localStorage.getItem('wa-classic-os') || os; } catch (e) {}
+const asked = new URLSearchParams(location.search).get('os');
+if (['mac', 'win', 'linux'].includes(asked)) os = asked;
+pick(os);
+</script>
+</body>
+</html>
